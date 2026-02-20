@@ -1,0 +1,90 @@
+:root {
+    --primary-text: #2c3e50;    
+    --accent-orange: #e67e22; 
+    --bg-light: #f8f9fa;       
+    --white: #ffffff;
+    --card-peach: #fff0e6;    
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif; /* */
+    background-color: var(--bg-light);
+    margin: 0 auto;
+    max-width: 1100px; 
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Georgia', serif; 
+    text-align: center;
+    color: var(--primary-text);
+}
+
+main {
+    display: inline-block; 
+    width: 70%; 
+    vertical-align: top;
+}
+
+aside {
+    display: inline-block;
+    width: 25%;
+    background-color: var(--white);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    vertical-align: top;
+    margin-left: 2%;
+}
+
+.car-grid article {
+    display: inline-block; /* */
+    width: 250px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px; /* */
+    text-align: center;
+    vertical-align: top;
+}
+
+.car-grid article:nth-child(odd) {
+    background-color: var(--card-peach);
+}
+
+.car-grid article:nth-child(even) {
+    background-color: var(--white);
+}
+
+.car-grid img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+article a {
+    display: inline-block;
+    background-color: var(--accent-orange);
+    color: var(--white);
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+article a:hover {
+    background-color: #d35400; 
+}
+
+article a:active {
+    transform: scale(0.95);
+}
+
+aside h3 {
+    border-bottom: 2px solid var(--accent-orange);
+    padding-bottom: 5px;
+}
+
+input:focus {
+    outline: 2px dashed var(--accent-orange); /* */
+}

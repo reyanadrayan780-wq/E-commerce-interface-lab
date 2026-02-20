@@ -1,0 +1,85 @@
+
+:root {
+    --primary-car: #2c3e50;    
+    --accent-orange: #e67e22; 
+    --bg-light: #f8f9fa;       
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-light);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+#delivery, form {
+    display: inline-block;
+    width: 60%;
+    vertical-align: top;
+}
+
+aside {
+    display: inline-block;
+    width: 30%;
+    background-color: var(--white);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-left: 3%;
+    vertical-align: top;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    transition: border 0.3s ease;
+}
+
+ 
+input:required {
+    border-left: 5px solid #e74c3c; 
+}
+
+
+input:valid {
+    border-left: 5px solid #2ecc71; 
+}
+
+
+input:focus {
+    outline: 2px dashed var(--accent-orange);
+}
+
+
+button {
+    width: 100%;
+    background-color: var(--accent-orange);
+    color: var(--white);
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+ 
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #d35400;
+}
+
+button:active {
+    transform: scale(0.95);
+}

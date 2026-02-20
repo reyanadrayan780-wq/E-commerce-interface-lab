@@ -1,0 +1,95 @@
+
+:root {
+    --primary-text: #2c3e50;    
+    --accent-orange: #e67e22; 
+    --white: #ffffff;
+    --bg-light: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif; 
+    background-color: var(--bg-light);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+header {
+    text-align: center; 
+    padding: 30px 0;
+    border-bottom: 1px solid #ccc;
+    background-color: var(--white);
+    margin-bottom: 30px;
+}
+
+nav ul {
+    list-style: none; 
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block; 
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none; 
+    color: var(--primary-text);
+    font-weight: bold;
+    transition: color 0.3s ease; 
+}
+
+nav a:hover {
+    color: var(--accent-orange); 
+}
+
+
+
+#history ul li::marker {
+    content: "🚘 "; 
+    color: var(--accent-orange);
+}
+
+#history ul {
+    padding-left: 20px;
+    line-height: 2;
+}
+
+dl {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+dt {
+    font-weight: bold;
+    color: var(--accent-orange);
+    margin-top: 10px;
+}
+
+dd {
+    margin-left: 20px;
+    font-style: italic;
+    color: #555;
+}
+
+
+details {
+    background-color: var(--white);
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+summary {
+    font-weight: bold;
+    color: var(--primary-text);
+}
+
+summary:hover {
+    color: var(--accent-orange);
+}

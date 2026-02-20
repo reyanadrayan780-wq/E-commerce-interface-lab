@@ -1,0 +1,120 @@
+
+:root {
+    --primary-text: #2c3e50;    
+    --accent-orange: #e67e22; 
+    --bg-light: #f8f9fa;       
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif; 
+    background-color: var(--bg-light);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h2 {
+    font-family: 'Georgia', serif; 
+    color: var(--primary-text);
+    border-bottom: 2px solid var(--accent-orange);
+    padding-bottom: 10px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    background-color: var(--white);
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+caption {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--primary-text);
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-text);
+    color: var(--white);
+}
+
+
+table tr td:first-child {
+    font-weight: bold;
+    color: var(--accent-orange);
+    width: 30%;
+}
+
+
+form {
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+input[type="number"] {
+    padding: 8px;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+}
+
+
+input:focus {
+    outline: 2px solid var(--accent-orange);
+}
+
+button {
+    background-color: var(--accent-orange);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s; /* */
+}
+
+button:hover {
+    background-color: #d35400; /* */
+}
+
+
+.reviews article {
+    background-color: var(--white);
+    padding: 20px;
+    border-left: 5px solid var(--accent-orange);
+    margin-top: 20px;
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin: 0;
+    color: #555;
+}
+
+blockquote::before {
+    content: open-quote; /* */
+    font-size: 2.5em;
+    color: var(--accent-orange);
+    vertical-align: sub;
+    line-height: 0;
+}
+
+blockquote::after {
+    content: close-quote; /* */
+    font-size: 2.5em;
+    color: var(--accent-orange);
+    vertical-align: sub;
+    line-height: 0;
+}
