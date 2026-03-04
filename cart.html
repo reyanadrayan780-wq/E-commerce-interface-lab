@@ -2,26 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Reservations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reservations | AutoDrive</title>
+    <link rel="stylesheet" href="cart.css">
 </head>
 <body>
-    <ul>
-        <li>
-            <img src="car-thumb.jpg" alt="Car" width="100">
-            <h3>Toyota Vios 2024</h3>
-            <p>Reservation Fee: ₱5,000</p>
-            <input type="number" value="1">
-        </li>
-    </ul>
+    <main class="cart-container">
+        <h1>My Garage Reservations</h1>
+        
+        <ul class="cart-list">
+            <li class="cart-item">
+                <img src="vios.jpg" alt="Car" class="product-img">
+                <div class="item-info">
+                    <h3>Toyota Vios 2024</h3>
+                    <p>Reservation Fee: ₱5,000</p>
+                </div>
+                <div class="item-qty">
+                    <label>Qty:</label>
+                    <input type="number" value="1" min="1">
+                </div>
+            </li>
+        </ul>
 
-    <div>
-        <p>Total Reservation Fee: ₱5,000</p>
-    </div>
+        <div class="cart-summary">
+            <p>Total Reservation Fee: <strong>₱5,000</strong></p>
+            <a href="checkout.html" class="checkout-btn">Proceed to Payment</a>
+        </div>
 
-    <a href="checkout.html">Proceed to Payment</a>
-
-    <section style="display: none;">
-        <p>Your garage is empty. Start adding cars!</p>
-    </section>
+        <section class="empty-msg" style="display: none;">
+            <p>Your garage is empty. Start adding cars!</p>
+        </section>
+    </main>
 </body>
 </html>

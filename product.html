@@ -2,34 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Inventory | AutoDrive</title>
+    <link rel="stylesheet" href="product.css">
 </head>
 <body>
-    <main>
-        <h1>Available Vehicles</h1>
-        <section class="car-grid">
-            <article>
-                <img src="car-sample.jpg" alt="Toyota Vios 2024">
-                <h3>Toyota Vios 2024</h3>
-                <p>Price: ₱850,000</p>
-                <a href="details.html">View Unit Details</a>
-            </article>
-            </section>
-    </main>
+    <div class="products-layout">
+        <aside class="filter-sidebar">
+            <h3>Filter Search</h3>
+            <form>
+                <p>Transmission:</p>
+                <input type="radio" id="auto" name="trans" value="AT">
+                <label for="auto">Automatic</label><br>
+                <input type="radio" id="manual" name="trans" value="MT">
+                <label for="manual">Manual</label>
 
-    <aside>
-        <h3>Filter Search</h3>
-        <form>
-            <p>Transmission:</p>
-            <input type="radio" id="auto" name="trans" value="AT">
-            <label for="auto">Automatic</label><br>
-            <input type="radio" id="manual" name="trans" value="MT">
-            <label for="manual">Manual</label>
+                <p>Body Type:</p>
+                <input type="checkbox" id="suv" name="type" value="SUV">
+                <label for="suv">SUV / Crossover</label>
+            </form>
+        </aside>
 
-            <p>Body Type:</p>
-            <input type="checkbox" id="suv" name="type" value="SUV">
-            <label for="suv">SUV / Crossover</label>
-        </form>
-    </aside>
+        <main>
+            <h1>Available Vehicles</h1>
+            <section class="car-grid">
+                <article class="car-card">
+                    <img src="car-sample.jpg" alt="Toyota Vios 2024">
+                    <h3>Toyota Vios 2024</h3>
+                    <p>Price: ₱850,000</p>
+                    <a href="details.html">View Unit Details</a>
+                </article>
+                </section>
+        </main>
+    </div>
 </body>
 </html>

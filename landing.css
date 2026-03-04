@@ -1,189 +1,104 @@
+/* =========================================
+   TASK 1: MOBILE-FIRST FOUNDATION (0px - 480px)
+   ========================================= */
 :root {
-    --primary-text: #2c3e50;    
-    --accent-orange: #e67e22; 
-    --bg-light: #f8f9fa;       
-    --text-main: #333333;
-    --white: #ffffff;
-    --card-peach: #fff0e6;    
+    --primary: #2c3e50;
+    --orange: #e67e22;
+    --light: #f8f9fa;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    background-color: var(--bg-light);
-    color: var(--text-main);
-    line-height: 1.6;
-    margin: 0 auto; 
-    max-width: 900px; 
-    padding: 0 20px;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--light);
 }
 
-
-h1, h2, h3 {
-    font-family: 'Georgia', serif; 
-    color: var(--primary-text);
+/* Task 5: Fluid Images */
+img {
+    max-width: 100%;
+    height: auto;
+    width: 300px;
 }
 
-h1 {
-    text-align: center; 
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-h2, h3 {
-    text-align: left; 
-    font-weight: normal;
-}
-
+/* =========================================
+   TASK 2: HEADER & NAV (FLEXBOX)
+   ========================================= */
 header {
-    text-align: center; 
-    padding: 20px 0;
-    border-bottom: 1px solid #ccc; 
-    margin-bottom: 40px;
+    display: flex; /* */
+    flex-direction: column; /* Stacked vertically sa mobile */
+    align-items: center; /* Vertically centered */
+    padding: 20px;
+    background: white;
+    gap: 15px;
+    border-bottom: 2px solid #ddd;
 }
 
 nav ul {
-    list-style-type: none; 
+    display: flex;
+    flex-direction: column; /* Stacked links sa mobile */
+    list-style: none;
     padding: 0;
     margin: 0;
+    gap: 10px;
+    text-align: center;
 }
-
-nav ul li {
-    display: inline-block; 
-    margin: 0 15px;
-}
-
 
 nav a {
-    text-decoration: none; 
-    color: var(--primary-text);
+    text-decoration: none;
+    color: var(--primary);
     font-weight: bold;
-  
-    transition: color 0.3s ease; 
 }
 
 
-nav a:hover {
-    color: var(--accent-orange); 
+@keyframes slideUpFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-button, .car-card a {
-    cursor: pointer;
-    background-color: var(--accent-orange); 
-    color: var(--white);
-    border: none;
-    padding: 10px 20px; 
-    border-radius: 3px; 
-    text-decoration: none; 
-    display: inline-block;
-    transition: background-color 0.3s, transform 0.2s; 
+.hero {
+    display: flex; /* */
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 60vh;
+    text-align: center;
+    background-color: #fff0e6;
+    padding: 20px;
+    /* Task 7: Applying animation */
+    animation: slideUpFade 1s ease-out forwards;
 }
 
-button:hover, .car-card a:hover {
-    background-color: #d68910; 
-}
 
-button:active, .car-card a:active {
-    transform: scale(0.95); 
+#featured-cars {
+    padding: 20px;
 }
-
-input:focus, button:focus {
-    outline: 2px dashed var(--accent-orange); 
-}
-
 
 .car-card {
-    display: inline-block; 
-    width: 250px;
-    margin: 0 20px 20px 0; 
-    padding: 30px 20px; 
-    border: 1px solid #e0e0e0;
-    border-radius: 8px; 
-    vertical-align: top;
-    text-align: center; 
-}
-
-.car-card:nth-child(odd) {
-    background-color: var(--card-peach); 
-}
-
-.car-card:nth-child(even) {
-    background-color: var(--white);
-}
-
-.car-card h3 {
+    background: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
     text-align: center;
-    font-weight: bold;
-    margin-top: 0;
-}
-
-
-.cart-container:empty {
-    display: block;
-    padding: 20px;
-    background-color: #ffcccc;
-    border: 1px solid red;
-}
-.cart-container:empty::before {
-    content: "Your cart is empty. Please add items.";
-    color: red;
-    font-weight: bold;
-}
-
-
-.price::before {
-    content: "₱"; 
-    margin-right: 2px;
-}
-
-.price {
-    display: block;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-input:required {
-    border-left: 5px solid red; 
-}
-input:valid {
-    border-left: 5px solid green; 
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-table tr td {
-    padding: 8px;
     border: 1px solid #ddd;
 }
-table tr td:first-child {
-    font-weight: bold; 
-    color: var(--accent-orange);
-    background-color: #f0f0f0;
-}
 
+@media (min-width: 769px) {
+    /* Task 2: Horizontal Header sa Desktop */
+    header {
+        flex-direction: row;
+        justify-content: space-between; /* Logo left, Nav right */
+        padding: 20px 80px;
+    }
 
-.order-list li::marker {
-    content: "✔ "; 
-    color: var(--accent-orange);
-}
+    nav ul {
+        flex-direction: row; /* Higa na ang links */
+        gap: 30px;
+    }
 
-
-blockquote {
-    font-style: italic;
-    margin: 20px 40px;
-    color: #555;
-}
-blockquote::before {
-    content: open-quote;
-    font-size: 2em;
-    color: var(--accent-orange);
-    vertical-align: bottom;
-}
-blockquote::after {
-    content: close-quote;
-    font-size: 2em;
-    color: var(--accent-orange);
-    vertical-align: bottom;
+    /* Task 3: Preview Grid for Desktop */
+    #featured-cars {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for landing preview */
+        gap: 20px;
+    }
 }

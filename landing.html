@@ -2,14 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoDrive | Premium Vehicles</title>
+    <link rel="stylesheet" href="landing.css">
 </head>
 <body>
-    <header>
+   <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="AutoDrive Logo" class="site-logo">
+        </div>
+        
         <nav>
             <ul>
                 <li><a href="landing.html">Home</a></li>
-                <li><a href="product.html">Sedans</a></li>
+                <li><a href="products.html">Sedans</a></li>
                 <li><a href="#">SUVs & Trucks</a></li>
                 <li><a href="account.html">My Garage</a></li>
             </ul>
@@ -25,12 +31,37 @@
 
         <section id="featured-cars">
             <h2>Featured Models</h2>
-            </section>
+            
+            <article class="car-card">
+                <img src="vios.jpg" alt="Toyota Vios" width="200">
+                <h3>Toyota Vios 2024</h3>
+                <p class="price">850,000</p> <a href="detail.html">View Details</a>
+            </article>
+
+            <article class="car-card">
+                <img src="hilux.jpg" alt="Toyota Hilux" width="200">
+                <h3>Toyota Hilux Conquest</h3>
+                <p class="price">1,850,000</p>
+                <a href="detail.html">View Details</a>
+            </article>
+        </section>
 
         <section id="promos">
             <h2>Zero Downpayment Deals</h2>
             <p>Check out our flexible financing options for this month.</p>
+            
+            <div class="promo-box">
+                <article>
+                    <h3>Student Special Promo</h3>
+                    <p>0% Downpayment for the first 10 student buyers in Northern Samar!</p>
+                    <button type="button">Avail Now</button>
+                </article>
+            </div>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 AutoDrive San Roque</p>
+    </footer>
 </body>
 </html>

@@ -1,120 +1,101 @@
-
+/*
+   TASK 1: MOBILE-FIRST BASE STYLES
+   */
 :root {
-    --primary-text: #2c3e50;    
-    --accent-orange: #e67e22; 
-    --bg-light: #f8f9fa;       
-    --white: #ffffff;
+    --orange: #e67e22;
+    --dark: #2c3e50;
+    --bg: #f4f4f4;
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif; 
-    background-color: var(--bg-light);
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    padding: 20px;
 }
 
-h2 {
-    font-family: 'Georgia', serif; 
-    color: var(--primary-text);
-    border-bottom: 2px solid var(--accent-orange);
-    padding-bottom: 10px;
+/* 
+   TASK 5: YADI AN RESPONSIVE TABLES
+   */
+.table-wrapper {
+    /* Pinipigilan ang horizontal scroll sa buong page */
+    width: 100%;
+    overflow-x: auto; 
+    margin-bottom: 30px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #ddd;
 }
-
 
 table {
     width: 100%;
-    border-collapse: collapse; 
-    background-color: var(--white);
-    margin-bottom: 30px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-caption {
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: var(--primary-text);
+    border-collapse: collapse;
+    min-width: 400px; /* Force scroll sa loob lang ng div sa maliit na screen */
 }
 
 th, td {
     padding: 12px;
-    border: 1px solid #ddd;
     text-align: left;
+    border: 1px solid #eee;
 }
 
-th {
-    background-color: var(--primary-text);
-    color: var(--white);
+th { background-color: var(--dark); color: white; }
+
+/*
+   TASK 7: PARA SA KEYFRAMES ANIMATION
+*/
+@keyframes bounceIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); opacity: 1; }
 }
 
-
-table tr td:first-child {
-    font-weight: bold;
-    color: var(--accent-orange);
-    width: 30%;
-}
-
-
-form {
-    background-color: #eee;
+.reviews article {
+    background: white;
     padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 40px;
+    border-radius: 10px;
+    border-left: 5px solid var(--orange);
+    /* Task 7: Apply bounce effect */
+    animation: bounceIn 0.8s ease-out; 
 }
 
-input[type="number"] {
-    padding: 8px;
-    margin: 0 10px;
-    border: 1px solid #ccc;
-}
-
-
-input:focus {
-    outline: 2px solid var(--accent-orange);
+/*
+   YADI MAN AN SA FORM & BUTTONS
+*/
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column; /* Stacked sa mobile */
+    gap: 15px;
 }
 
 button {
-    background-color: var(--accent-orange);
-    color: var(--white);
-    padding: 10px 20px;
+    background: var(--orange);
+    color: white;
     border: none;
-    cursor: pointer;
+    padding: 15px;
     font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s; /* */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
 button:hover {
-    background-color: #d35400; /* */
+    transform: translateY(-3px); /* Interactive state */
 }
 
-
-.reviews article {
-    background-color: var(--white);
-    padding: 20px;
-    border-left: 5px solid var(--accent-orange);
-    margin-top: 20px;
-}
-
-blockquote {
-    font-style: italic;
-    font-size: 1.1rem;
-    margin: 0;
-    color: #555;
-}
-
-blockquote::before {
-    content: open-quote; /* */
-    font-size: 2.5em;
-    color: var(--accent-orange);
-    vertical-align: sub;
-    line-height: 0;
-}
-
-blockquote::after {
-    content: close-quote; /* */
-    font-size: 2.5em;
-    color: var(--accent-orange);
-    vertical-align: sub;
-    line-height: 0;
+/*
+   TASK 1: DESKTOP VIEW (min-width: 769px)
+*/
+@media (min-width: 769px) {
+    body { padding: 40px 100px; }
+    
+    form {
+        flex-direction: row; /* Higa na ang form sa desktop */
+        align-items: center;
+        justify-content: center;
+    }
 }
